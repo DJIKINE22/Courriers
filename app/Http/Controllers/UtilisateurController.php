@@ -14,7 +14,7 @@ class UtilisateurController extends Controller
     public function index()
     {
         //
-          $avions = Vols::all(); //permet de recuperer les donnees dans la base 
+          $utilisateurs = Utilisateur::all(); //permet de recuperer les donnees dans la base 
         return View('utilisateurs.index', compact('utilisateurs')); // compact c'est pour afficher la valeur recuperer 
     }
 
