@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
 
 class UtilisateurController extends Controller
@@ -48,9 +48,9 @@ class UtilisateurController extends Controller
             'confirmation_mot_de_passe' => 'required'|'same:mot_de_pass',
             'telephone' => 'required'|'unique:utilisateurs',
         ]);
-         $Utilisateur = Utilisateur::create($validatedData);
+          Utilisateur::create($validatedData);
     
-        return redirect('/utilisateur')->with('success', 'Utilisateur créer avec succèss');
+        return redirect('/utilisateurs')->with('success', 'Utilisateur créer avec succèss');
     }
 
     /**
