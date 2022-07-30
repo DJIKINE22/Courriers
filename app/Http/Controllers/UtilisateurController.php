@@ -43,10 +43,10 @@ class UtilisateurController extends Controller
             'prenom' => 'required',
             'adresse' => 'required',
             'poste' => 'required',
-            'email' => 'required'|'unique:utilisateurs',
-            'mot_de_passe' => 'required',
-            'confirmation_mot_de_passe' => 'required'|'same:mot_de_pass',
-            'telephone' => 'required'|'unique:utilisateurs',
+            'email' => 'required',
+            'mot_de_pass' => 'required',
+            'confirmation_mot_de_pass' => 'required',
+            'telephone' => 'required',
         ]);
           Utilisateur::create($validatedData);
     

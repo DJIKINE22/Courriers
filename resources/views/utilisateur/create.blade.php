@@ -35,11 +35,11 @@
             </div>
             <div class="mb-3">
                 <label for="Motdepass">Mot de pass</label>
-                <input class="form-control" name="motdepass">
+                <input class="form-control" name="mot_de_pass">
             </div>
             <div class="mb-3">
                 <label for="cMotdepass" >Confirmation Mot de pass <span class="text-danger"></sapn></label>
-                <input class="form-control" name="confirmationmotdepass">
+                <input class="form-control" name="confirmation_mot_de_pass">
             </div>
             <div class="mb-3">
                 <label for="telephone">telephone</label>
