@@ -48,9 +48,9 @@ class UtilisateurController extends Controller
             'confirmation_mot_de_passe' => 'required'|'same:mot_de_pass',
             'telephone' => 'required'|'unique:utilisateurs',
         ]);
-         $ulisateurs = Utilisateur::create($validatedData);
+         $Utilisateur = Utilisateur::create($validatedData);
     
-        return redirect('/utilisateurs')->with('success', 'Utilisateur créer avec succèss');
+        return redirect('/utilisateur')->with('success', 'Utilisateur créer avec succèss');
     }
 
     /**
