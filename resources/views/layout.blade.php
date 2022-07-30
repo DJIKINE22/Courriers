@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>@yield('title', $title)</h1>
+        <h1></h1>
         @yield('content')
 
     </div>
