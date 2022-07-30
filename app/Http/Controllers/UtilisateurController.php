@@ -38,6 +38,19 @@ class UtilisateurController extends Controller
     public function store(Request $request)
     {
         //
+          $validatedData = $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+            'adresse' => 'required',
+            'poste' => 'required',
+            'email' => 'required'|'unique:utilisateurs',
+            'mot_de_passe' => 'required',
+            'confirmation_mot_de_passe' => 'required'|'same:mot_de_pass',
+            'telephone' => 'required'|'unique:utilisateurs',
+        ]);
+         $ulisateurs = Utilisateur::create($validatedData);
+    
+        return redirect('/utilisateurs')->with('success', 'Utilisateur créer avec succèss');
     }
 
     /**
